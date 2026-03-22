@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>皇仁「小小發明家」- 眼睛健康問題探析</title>
+    <style>
+        /* 中國古代風 CSS 設計 */
+        body { 
+            /* 預設使用楷體或宋體/明體，呈現古籍感 */
+            font-family: "KaiTi", "STKaiti", "BiauKai", "DFKai-SB", "PMingLiU", serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            color: #3e2723; /* 深墨色 */
+            /* 淺淡宣紙背景 */
+            background-color: #f4ecd8; 
+            background-image: linear-gradient(120deg, #f5ebd3 0%, #fcf9ee 50%, #f5ebd3 100%);
+        }
+        
+        h1, h2, h3 { 
+            color: #5c2a21; /* 古典赭紅色 */
+            text-align: center; 
+            font-weight: bold;
+        }
+
+        h1 {
+            border-bottom: 2px solid #5c2a21;
+            padding-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dashed #a1887f;
+            padding-bottom: 5px;
+        }
+
+        /* 頁面邊框：模擬卷軸或古籍外框 */
+        .page { 
+            border: 2px solid #8d6e63; 
+            border-radius: 4px; 
+            padding: 30px; 
+            background-color: rgba(255, 255, 255, 0.5); /* 半透明底色透出宣紙感 */
+            min-height: 60vh; 
+            position: relative; 
+            padding-bottom: 70px; 
+            box-shadow: 0 4px 15px rgba(109, 76, 65, 0.1);
+        }
+        
+        .hidden { display: none; }
+        
+        /* 按鈕設計：模擬古代木牌或印章 */
+        button, .btn-link { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin: 5px; 
+            background-color: #795548; /* 古木色 */
+            color: #fdfaf6; 
+            border: 1px solid #4e342e; 
+            border-radius: 3px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-size: 18px; 
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover, .btn-link:hover { 
+            background-color: #5c2a21; /* 懸停時變為深赭紅 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .nav-buttons { position: absolute; bottom: 20px; width: calc(100% - 60px); text-align: right; }
+        .nav-buttons.center { text-align: center; }
+        .sub-buttons { margin-top: 15px; border-top: 1px dashed #bcaaa4; padding-top: 15px; }
+        
+        /* 內容區塊：模擬書箋 */
+        .content-box { 
+            margin-top: 20px; 
+            padding: 20px; 
+            background-color: #faf6ed; 
+            border-left: 6px solid #8d6e63; /* 傳統線裝書邊 */
+            border-top: 1px solid #d7ccc8;
+            border-right: 1px solid #d7ccc8;
+            border-bottom: 1px solid #d7ccc8;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.05); 
+        }
+        
+        .content-box h4 { 
+            margin-top: 0; 
+            color: #b71c1c; /* 朱砂紅 */
+            border-bottom: 1px solid #e0e0e0; 
+            padding-bottom: 10px; 
+            font-size: 20px;
+        }
+        
+        .content-box h5 { 
+            color: #3e2723; 
+            margin-bottom: 5px; 
+            font-size: 18px; 
+            background-color: #eee7d5;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+        
+        ul { margin: 5px 0 15px 0; padding-left: 25px; list-style-type: square; }
+        li { margin-bottom: 8px; }
+        
+        video { width: 100%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #795548; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .center-content { text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>皇仁「小小發明家」：眼睛健康問題探析</h1>
+
+    <div id="page1" class="page">
+        <div class="center-content">
+            <h2>壹 · AI 醫師李視珍</h2>
+        </div>
+        <div class="center-content">
+            <video id="aiVideo" controls>
+                <source src="AI醫師李視珍.mp4" type="video/mp4">
+                您的瀏覽器不支援影片標籤。
+            </video>
+            <br><br>
+            <button onclick="document.getElementById('aiVideo').play()">播放影片</button>
+        </div>
+        
+        <div class="nav-buttons">
+            <button onclick="switchPage('page2')">下一頁 ➔</button>
+        </div>
+    </div>
+
+    <div id="page2" class="page hidden">
+        <div class="center-content">
+            <h2>貳 · 進行即時眼睛健康問題分析</h2>
+        </div>
+        <div class="center-content" style="margin-top: 50px;">
+            <p style="font-size: 18px;">請點擊下方木牌，前往 AI 模型進行您的眼睛狀態辨析：</p>
+            <br>
+            <a href="https://teachablemachine.withgoogle.com/models/fsV-yr3R6/" target="_blank" class="btn-link" style="font-size: 22px; padding: 15px 40px; border-radius: 8px;">開始眼睛辨析</a>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="switchPage('page3')">下一頁 ➔</button>
+        </div>
+    </div>
+
+    <div id="page3" class="page hidden">
+        <div class="center-content">
+            <h2>叁 · 分析結果詳情</h2>
+        </div>
+        <p style="text-align: center; font-size: 18px;">請根據您的分析結果，選擇下方的選項以查閱醫理詳情：</p>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="showMain('redEyes')">紅絲密佈</button>
+            <button onclick="showMain('yellowSclera')">眼白發黃</button>
+            <button onclick="showMain('paleEye')">眼底蒼白</button>
+            <button onclick="showMain('bulgingEye')">眼睛突出</button>
+            <button onclick="showMain('darkCircles')">黑眼圈+眼袋/眼窩發青</button>
+        </div>
+
+        <div id="redEyes" class="hidden sub-buttons center-content">
+            <h4 style="color: #b71c1c;">【 紅絲密佈 】請選擇具體情況：</h4>
+            <button onclick="showContent('red1')">一般情況</button>
+            <button onclick="showContent('red2')">白澀症（長期乾澀）</button>
+            <button onclick="showContent('red3')">風熱赤眼（急性發炎）</button>
+            <button onclick="showContent('red4')">時發目癢（過敏反應）</button>
+        </div>
+
+        <div id="darkCircles" class="hidden sub-buttons center-content">
+            <h4 style="color: #3e2723;">【 黑眼圈相關 】請選擇具體情況：</h4>
+            <button onclick="showContent('dark1')">長期熬夜、年老體弱</button>
+            <button onclick="showContent('dark2')">眼袋明顯</button>
+        </div>
+
+        <div id="contentDisplay" class="hidden content-box">
+            </div>
+
+        <div class="nav-buttons center">
+            <button onclick="switchPage('page1')" style="background-color: #8d6e63;">返回首頁 ↺</button>
+        </div>
+    </div>
+
+    <script>
+        // 頁面切換邏輯
+        function switchPage(pageId) {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page3').classList.add('hidden');
+            
+            // 隱藏第三頁的詳細內容狀態
+            document.getElementById('redEyes').classList.add('hidden');
+            document.getElementById('darkCircles').classList.add('hidden');
+            document.getElementById('contentDisplay').classList.add('hidden');
+
+            document.getElementById(pageId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 列點資料庫 (純文字，無來源標記)
+        const eyeData = {
+            'red1': {
+                title: '紅絲密佈 - 一般情況',
+                symptoms: '<ul><li>紅血絲出現在眼角。</li><li>血管擴張、眼睛出現紅色條紋、血絲。</li><li>伴隨乾澀、癢、異物感或分泌物增多，出現細細的紅血絲。</li></ul>',
+                tcm: '<ul><li>「肝開竅於目」，眼睛出現紅絲不僅是局部問題，更反映了內臟的熱力分佈。</li><li><strong>心火旺：</strong>易見失眠、口舌生瘡或心情煩躁。</li><li><strong>肺熱：</strong>伴隨咳嗽、咽乾。</li><li><strong>肝經有火或肝血不足：</strong>紅絲靠近黑眼珠。</li><li><strong>脾胃積熱：</strong>眼瞼紅腫或伴隨血絲。</li></ul>',
+                causes: '<ul><li>情緒激動。</li><li>睡眠不足、長時間用眼過度。</li><li>隱形眼鏡配戴過久、揉眼睛。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>清淡飲食，多喝溫水，多吃新鮮蔬菜、水果（避免過於寒涼）。</li><li><strong>忌：</strong>辛辣刺激食物、熱性食物。</li><li><strong>禁食：</strong>發物。</li></ul>',
+                therapy: '<ul><li>菊花枸杞茶、薄荷綠豆湯。</li></ul>'
+            },
+            'red2': {
+                title: '紅絲密佈 - 白澀症 (眼睛長期乾澀)',
+                symptoms: '<ul><li>白睛血絲微紅。</li></ul>',
+                tcm: '<ul><li>陰血不足、燥邪傷津。</li></ul>',
+                causes: '<ul><li>用眼過度。</li><li>久處於風沙塵埃環境。</li><li>年老體弱。</li></ul>',
+                diet: '<ul><li>需滋陰養血，潤燥明目。</li><li><strong>宜：</strong>多吃富含維他命A、胡蘿蔔素的食物；富含Omega-3的食物；多喝溫水。</li><li><strong>忌：</strong>辛辣香燥食物（易傷陰耗液）；過度溫補的食材。</li></ul>',
+                therapy: '<ul><li>菊花枸杞茶、胡蘿蔔豬肝湯、黑芝麻糊/奶。</li></ul>'
+            },
+            'red3': {
+                title: '紅絲密佈 - 風熱赤眼 (急性細菌性結膜炎)',
+                symptoms: '<ul><li>患者目癢，目痛，流淚。</li><li>白睛紅赤或浮腫，翻開眼瞼見內面紅赤。</li></ul>',
+                tcm: '<ul><li>風熱邪氣侵襲。</li></ul>',
+                causes: '<ul><li>外感風熱而突然發病，加之與患者有密切接觸，引發傳染。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>清淡飲食，多喝溫水，多吃新鮮蔬菜、水果（避免過於寒涼）。</li><li><strong>忌：</strong>辛辣刺激食物、熱性食物。</li><li><strong>禁食：</strong>發物（魚蝦蟹、牛羊肉、公雞等易加重炎症）。</li></ul>',
+                therapy: '<ul><li>菊花枸杞茶、薄荷綠豆湯。</li></ul>'
+            },
+            'red4': {
+                title: '紅絲密佈 - 時發目癢 (春季結膜炎、花粉過敏)',
+                symptoms: '<ul><li>患者目癢難忍，白睛紅赤，呈週期性發作。</li></ul>',
+                tcm: '<ul><li>風熱外襲。</li></ul>',
+                causes: '<ul><li>與春夏植物生長，花粉旺盛有關。</li></ul>',
+                diet: '<ul><li><strong>發作期：</strong>嚴格忌口辛辣、發物、熱性水果。</li><li><strong>緩解期：</strong>宜清淡、均衡、易消化。多吃健脾益氣的食物。避免生冷寒涼傷脾胃。</li></ul>',
+                therapy: '<ul><li>桑葉菊花決明子茶、金銀花甘草茶、山藥薏米粥。</li></ul>'
+            },
+            'yellowSclera': {
+                title: '眼白發黃',
+                symptoms: '<ul><li>鞏膜明顯發黃，呈橘子色。</li></ul>',
+                tcm: '<ul><li>肝膽濕熱、膽道結石或蛔蟲等阻塞膽道，膽汁排泄不暢，溢於肌膚、白睛。</li><li>意味著肝膽系統存在嚴重問題。</li></ul>',
+                causes: '<ul><li>外感濕熱疫毒（如甲肝、乙肝等病毒性肝炎）。</li><li>飲食不節，過食肥甘厚味或酗酒，內生濕熱。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>優質蛋白質，清淡飲食，高纖維蔬果。</li><li><strong>忌：</strong>高脂食物，油炸食品。</li><li><strong>注意：</strong>眼白發黃是重要臨床體徵，一旦發現，必須立即就醫，聽從醫生專業意見。</li></ul>',
+                therapy: '<ul><li>請聽從醫生專業意見，不宜自行食療。</li></ul>'
+            },
+            'paleEye': {
+                title: '眼底蒼白',
+                symptoms: '<ul><li>眼白顏色淡白，缺乏正常的光澤和血色。</li><li>可伴有面色蒼白或萎黄、唇色淡白。</li><li>易疲倦、頭暈、心慌氣短。</li></ul>',
+                tcm: '<ul><li>白睛屬氣輪，內應於肺。肺主氣，氣能生血、行血。</li><li>眼底蒼白主要反映氣血不足，身體整體處於氣血虧虛的狀態。</li><li>肺氣不足，不能將氣血充分輸布濡養于白睛。</li></ul>',
+                causes: '<ul><li>長期營養不良，攝入較少。</li><li>脾胃虛弱，氣血生化不足；或有血液流失。</li><li>老年人久病、重病耗傷氣血。</li><li>過度勞累，思慮過度耗傷心脾。</li></ul>',
+                diet: '<ul><li>需健脾益氣，補血養心。</li><li><strong>宜：</strong>多吃補益氣血的食物，保證營養均衡。</li></ul>',
+                therapy: '<ul><li>紅棗桂圓蓮子粥、菠菜豬肝湯。</li></ul>'
+            },
+            'bulgingEye': {
+                title: '眼睛突出',
+                symptoms: '<ul><li>眼窩組織水腫和脂肪增生，將眼球向外推。</li></ul>',
+                tcm: '<ul><li>中醫稱為「鷹眼凝睛」。</li><li>「臟腑積熱」或「風熱蘊結」：熱邪上壅於目，使得眼絡瘀滯、清竅閉阻。</li><li>通常與「肝火亢盛」、「痰火鬱結」或「脾腎虧虛」有關。</li></ul>',
+                causes: '<ul><li>甲狀腺亢進等代謝異常。</li><li>眼眶腫瘤、感染、血管疾病、外傷、高度近視或先天結構問題。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>高蛋白質食物、飲食清淡及高纖維蔬果。</li><li><strong>忌：</strong>高脂、油炸食物，避免加重熱邪。</li></ul>',
+                therapy: '<ul><li>夏枯草雙豆豬腱湯、養肝護肝清火湯、五指毛桃太子參蘋果湯。</li></ul>'
+            },
+            'dark1': {
+                title: '黑眼圈+眼袋/眼窩發青 - 長期熬夜、年老體弱',
+                symptoms: '<ul><li>眼圈顏色黯黑，多呈青黑色，範圍較大，可伴有眼袋。</li></ul>',
+                tcm: '<ul><li>黑色屬腎。黑眼圈即腎精不足，不能上榮於目。</li><li>目周氣血失養，兼有水液代謝失調。</li><li>常見於肝腎虧虛、氣血不足、肝氣鬱結、肺氣不足。</li></ul>',
+                causes: '<ul><li>睡眠不足與疲勞：熬夜、長時間用眼。</li><li>令眼下血管擴張、血液滯留，看起來呈現藍紫或暗色陰影。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>適當食用滋補腎精的食物，在食療中加入黑色食物。</li><li><strong>忌：</strong>辛辣刺激。</li></ul>',
+                therapy: '<ul><li>桑椹枸杞茶。</li></ul>'
+            },
+            'dark2': {
+                title: '黑眼圈+眼袋/眼窩發青 - 眼袋明顯',
+                symptoms: '<ul><li>眼圈顏色黯黑，多呈青黑色，範圍較大，可伴有眼袋。</li></ul>',
+                tcm: '<ul><li>脾虛痰濕。</li><li>脾虛運化水濕無力，痰濕內停，阻滯氣機，氣血運行不暢，水液停聚於眼瞼。</li></ul>',
+                causes: '<ul><li>飲食不節，過食生冷肥甘，損傷脾胃。</li><li>思慮過度，勞倦傷脾。</li></ul>',
+                diet: '<ul><li><strong>宜：</strong>多吃清淡、健脾利濕的食物。</li><li><strong>忌：</strong>生冷、油膩、甜膩食物。</li><li>三餐定時定量，避免暴飲暴食。</li></ul>',
+                therapy: '<ul><li>藥茯苓薏米粥、陳皮生薑茶。</li></ul>'
+            }
+        };
+
+        // 展開主選項邏輯
+        function showMain(category) {
+            document.getElementById('redEyes').classList.add('hidden');
+            document.getElementById('darkCircles').classList.add('hidden');
+            document.getElementById('contentDisplay').classList.add('hidden');
+
+            if (category === 'redEyes' || category === 'darkCircles') {
+                document.getElementById(category).classList.remove('hidden');
+            } else {
+                showContent(category);
+            }
+        }
+
+        // 顯示對應內容邏輯
+        function showContent(key) {
+            const data = eyeData[key];
+            const display = document.getElementById('contentDisplay');
+            display.innerHTML = `
+                <h4>${data.title}</h4>
+                <h5>症狀</h5> ${data.symptoms}
+                <h5>中醫解說</h5> ${data.tcm}
+                <h5>可能成因</h5> ${data.causes}
+                <h5>飲食注意</h5> ${data.diet}
+                <h5>保健食療</h5> ${data.therapy}
+            `;
+            display.classList.remove('hidden');
+            // 讓頁面平滑滾動到內容區
+            display.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
